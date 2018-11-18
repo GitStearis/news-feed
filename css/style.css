@@ -7,9 +7,9 @@ body {
   background-color: #eee;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: stretch;
   align-items: center;
 
@@ -48,6 +48,13 @@ body {
 }
 
 .tab-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+
   width: 100%;
   min-height: 70vh;
 
@@ -56,6 +63,7 @@ body {
 }
 
 .article-container {
+  width: 95%;
   padding: 1em;
 }
 
@@ -82,7 +90,6 @@ a:active {
 }
 
 .article {
-  background-image: url('https://img.tyt.by/720x720s/n/reuters/00/2/portfel_keys_rtr353mh.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,6 +114,21 @@ a:active {
 .description {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.loader {
+  border: 1em solid #ccc;
+  border-top: 1em solid #aaa;  
+  border-bottom: 1em solid #bbb; 
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 
