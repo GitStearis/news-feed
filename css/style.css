@@ -1,0 +1,112 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #eee;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+
+  color: #222;
+  font-family: 'Consolas', Arial, Helvetica, sans-serif;
+}
+
+.tabbed-component {
+  width: 70%;
+  height: auto;
+}
+
+.tab-buttons {
+  width: 100%;
+  background-color: #ccc;
+}
+
+.tab-buttons button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1em;
+  transition: 0.3s;
+
+  color: #222;
+  font-family: 'Consolas', Arial, Helvetica, sans-serif;
+}
+
+.tab-buttons button:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.tab-buttons button.active {
+  background-color: #ddd;
+}
+
+.tab-content {
+  width: 100%;
+  min-height: 70vh;
+
+  background-color: #ddd;
+  border-radius: 0 0 2.5em 2.5em;
+}
+
+.article-container {
+  padding: 1em;
+}
+
+.article-container a {
+  color: #ddd;
+  transition: 0.3s;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #eee;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.article {
+  background-image: url('https://img.tyt.by/720x720s/n/reuters/00/2/portfel_keys_rtr353mh.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #aaa;
+}
+
+.blur {
+  padding: 1em; 
+  background-color: rgba(64, 64, 64, 0.75);
+  transition: 0.3s;
+}
+
+.blur:hover {
+  background-color: rgba(64, 64, 64, 0.6);
+}
+
+.title {
+  margin-top: 0.5em;
+  font-size: 2em;
+}
+
+.description {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
