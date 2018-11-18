@@ -20,6 +20,8 @@ body {
 .tabbed-component {
   width: 70%;
   height: auto;
+
+  flex: 1 0 auto;
 }
 
 .tab-buttons {
@@ -129,6 +131,16 @@ a:active {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+footer {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+footer .attribution {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 
