@@ -5,19 +5,19 @@
   const config = {
     technology: {
       id: 'technology',
-      title: 'Технологии'
+      title: 'Technology'
     },
     business: {
       id: 'business',
-      title: 'Бизнес'
+      title: 'Business'
     },
     health: {
       id: 'health',
-      title: 'Здоровье'
+      title: 'Health'
     },
     entertainment: {
       id: 'entertainment',
-      title: 'Развлечения',
+      title: 'Entertainment',
     }
   };
 

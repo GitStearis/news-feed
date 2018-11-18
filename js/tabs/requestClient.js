@@ -2,7 +2,7 @@ class RequestClient {
   constructor(apiKey) {
     this.url = {
       address: 'https://newsapi.org/v2/top-headlines',
-      country: 'ru',
+      country: 'us',
       apiKey
     };
   }
