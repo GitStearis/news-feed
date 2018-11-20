@@ -1,4 +1,4 @@
-class RequestClient {
+class NewsApiClient {
   constructor(apiKey) {
     this.url = {
       address: 'https://newsapi.org/v2/top-headlines',

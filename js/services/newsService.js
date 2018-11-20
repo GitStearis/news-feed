@@ -2,11 +2,11 @@ class NewsService {
   constructor(apiKey, config) {
     this.config = config;
 
-    this.tabBuilder = new TabBuilder(this.config);
-    this.requestClient = new RequestClient(apiKey);
+    this.tabBuilder = new TabbedComponent('tabbed-component', this.config);
+    this.requestClient = new NewsApiClient(apiKey);
 
     this.handleRequestEvents();
-    this.bindTabBuilderToRequests();
+    this.bindTabbedComponentToRequests();
     this.selectFirstTab();
   }
 
@@ -14,7 +14,7 @@ class NewsService {
     this.tabBuilder.selectFirstTab();
   }
 
-  bindTabBuilderToRequests() {
+  bindTabbedComponentToRequests() {
     this.tabBuilder.buttons.childNodes.forEach(button => {
       if (button.id) {
         this.tabBuilder.handleClick(button, this.requestClient.fetchNews.bind(this.requestClient, button.id));
@@ -41,9 +41,7 @@ class NewsService {
 
   onRequestComplete(event) {
     event.detail.then((response) => {
-      this.tabBuilder.clearContent();
-      this.tabBuilder.fillContent(response.articles);
-    })
+      this.tabBuilder.render(response.articles);
+    });
   }
-  
 }
