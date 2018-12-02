@@ -1,0 +1,22 @@
+button {
+  width: auto;
+
+  padding: 1em;
+
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  color: #cfcfcf;
+  font-family: 'Consolas', Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color: #353737;
+}
+
+button.active {
+  background-color: #353737;
+}
