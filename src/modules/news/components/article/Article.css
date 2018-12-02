@@ -1,0 +1,58 @@
+article {
+  position: relative;
+
+  width: 95%;
+  height: auto;
+
+  overflow: hidden;
+}
+
+article img {
+  position: absolute;
+  z-index: 0;
+
+  width: 100%;
+  height: auto;
+
+  top: -50%;
+  left: 0;
+
+  transition: all 1s ease;
+}
+
+article img:hover {
+  transform: scale(1.2);
+}
+
+article a {
+  text-decoration: none;
+  color: inherit;
+}
+
+article a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+
+  padding: 1em;
+  background-color: rgba(33,36,36, 0.75);
+  transition: 0.3s;
+}
+
+.content:hover {
+  background-color: rgba(33,36,36, 0.65);
+}
+
+.title {
+  margin-top: 0.5em;
+  font-size: 2em;
+}
+
+.description {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

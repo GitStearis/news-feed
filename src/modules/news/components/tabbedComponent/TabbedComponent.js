@@ -13,7 +13,6 @@ class TabbedComponent extends Component {
     this.onTabChoose = this.onTabChoose.bind(this);
     this.tabNames = this.props.data.map(datum => datum.tabName || '');
     this.tabPanels = this.props.data.map(datum => datum.tabPanel || '');
-    this.data = props.data;
   }
 
   componentWillMount() {
