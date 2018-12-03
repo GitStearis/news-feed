@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import TabList from './tabList/TabList.js';
 import Tab from './tab/Tab.js';
 import TabContent from './tabContent/TabContent.js';
-import TabPanel from './tabPanel/TabPanel.js';
 
 import './TabbedComponent.css';
 
@@ -47,7 +46,7 @@ class TabbedComponent extends Component {
   renderTabContent() {
     return (
       <TabContent>
-        {this.props.content}
+        {this.props.content || this.props.children}
       </TabContent>
     );
   }
