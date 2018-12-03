@@ -30,12 +30,16 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run deploy`
+
+Deploys the application at the server specified in `homepage` variable of `package.json`. Uses [gh-pages package](https://www.npmjs.com/package/gh-pages) to deploy.
+
 ## Details
 
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app);
 * Gave a [Google News API](https://newsapi.org/docs) a chance;
-* Loader is a recycled example from [W3Schools](https://www.w3schools.com/howto/howto_css_loader.asp).
-
+* Loader is a recycled example from [W3Schools](https://www.w3schools.com/howto/howto_css_loader.asp);
+* Deploying React app using [GH Pages](https://github.com/gitname/react-gh-pages).
 ## Author
 
 * **George Puisha** - [GitStearis](https://github.com/GitStearis)
