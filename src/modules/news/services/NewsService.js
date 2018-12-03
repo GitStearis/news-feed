@@ -1,4 +1,4 @@
-class NewsApiClient {
+export default class NewsService {
   constructor(apiKey) {
     this.url = {
       address: 'https://newsapi.org/v2/top-headlines',
@@ -15,13 +15,8 @@ class NewsApiClient {
   fetchNews(theme) {
     const url = this.urlBuilder(theme);
     const request = new Request(url);
-    const requestStart = new CustomEvent('requestStart');
-    document.dispatchEvent(requestStart);
-    fetch(request).then((response) => {
-      const requestComplete = new CustomEvent('requestComplete', { 
-        detail: response.json()
-      });
-      document.dispatchEvent(requestComplete);
+    return fetch(request).then((response) => {
+      return response.json();
     });
   }
 }
