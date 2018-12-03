@@ -7,10 +7,18 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <main className='app'>
-        <NewsModule>
-        </NewsModule>
-      </main>
+      <div>
+        <main className='app'>
+          <NewsModule>
+          </NewsModule>
+        </main>
+        <footer>
+          <div class="attribution">
+            <p>Sorry, lads, but we are</p>
+            <a href="https://newsapi.org">Powered by News API</a>
+          </div>
+        </footer>
+      </div>
     );
   }
 }

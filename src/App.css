@@ -6,3 +6,22 @@
   align-content: stretch;
   align-items: center;
 }
+
+footer {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+footer .attribution {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+footer .attribution a {
+  text-decoration: none;
+  color: #cfcfcf;
+}
+
+footer .attribution a:hover {
+  text-decoration: underline;
+}
