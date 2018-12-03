@@ -10,17 +10,18 @@ import './TabbedComponent.css';
 class TabbedComponent extends Component {
   constructor(props) {
     super(props);
-    this.onTabChoose = this.onTabChoose.bind(this);
-    this.tabNames = this.props.data.map(datum => datum.tabName || '');
-    this.tabPanels = this.props.data.map(datum => datum.tabPanel || '');
+    this.tabNames = this.props.tabs;
   }
 
   componentWillMount() {
-    this.setState({ activeTab: 0});
+    const activeTab = 0;
+    this.setState({activeTab});
+    this.props.onTabChange(this.tabNames[activeTab]);
   }
 
   onTabChoose(index) {
     this.setState({ activeTab: index});
+    this.props.onTabChange(this.tabNames[index]);
   }
 
   isTabActive(index) {
@@ -44,17 +45,9 @@ class TabbedComponent extends Component {
   }
 
   renderTabContent() {
-    let tabs = [];
-    for (let i = 0; i < this.tabPanels.length; i++) {
-      tabs.push(
-        <TabPanel key={`tab-panel-${i}`} active={this.isTabActive(i)}>
-          {this.tabPanels[i]}
-        </TabPanel>
-      );
-    }
     return (
       <TabContent>
-        {tabs}
+        {this.props.content}
       </TabContent>
     );
   }

@@ -15,13 +15,8 @@ export default class NewsService {
   fetchNews(theme) {
     const url = this.urlBuilder(theme);
     const request = new Request(url);
-    const requestStart = new CustomEvent('requestStart');
-    document.dispatchEvent(requestStart);
-    fetch(request).then((response) => {
-      const requestComplete = new CustomEvent('requestComplete', { 
-        detail: response.json()
-      });
-      document.dispatchEvent(requestComplete);
+    return fetch(request).then((response) => {
+      return response.json();
     });
   }
 }
