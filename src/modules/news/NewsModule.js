@@ -17,17 +17,6 @@ const topics = [
   'Entertainment',
 ];
 
-const data = [
-  {
-    tabName: 'Science',
-    tabPanel: 'Science Tab'
-  },
-  {
-    tabName: 'Technology',
-    tabPanel: 'Technology Tab'
-  }
-];
-
 class NewsModule extends Component {
   constructor(props) {
     super(props);
