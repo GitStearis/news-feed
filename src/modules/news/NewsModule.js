@@ -44,10 +44,10 @@ class NewsModule extends Component {
 
   setContent(data) {
     let articles = [];
-    data.forEach((datum, index) => {
+    data.forEach((datum) => {
       const articleContent = mapNews(datum);
       articles.push((
-        <Article key={index} content={articleContent}></Article>
+        <Article key={articleContent.href} content={articleContent}></Article>
       ));
     });
     this.setState({

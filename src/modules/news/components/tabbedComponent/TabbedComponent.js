@@ -31,7 +31,7 @@ class TabbedComponent extends Component {
     let tabs = [];
     for (let i = 0; i < this.tabNames.length; i++) {
       tabs.push(
-        <Tab key={`tab-${i}`} active={this.isTabActive(i)} onClick={() => this.onTabChoose(i)}>
+        <Tab key={`tab-${this.tabNames[i]}`} active={this.isTabActive(i)} onClick={() => this.onTabChoose(i)}>
           {this.tabNames[i]}
         </Tab>
       );
