@@ -28,8 +28,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run deploy`
 
 Deploys the application at the server specified in `homepage` variable of `package.json`. Uses [gh-pages package](https://www.npmjs.com/package/gh-pages) to deploy.
