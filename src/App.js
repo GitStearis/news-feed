@@ -13,9 +13,9 @@ class App extends Component {
           </NewsModule>
         </main>
         <footer>
-          <div class="attribution">
+          <div className='attribution'>
             <p>Sorry, lads, but we are</p>
-            <a href="https://newsapi.org">Powered by News API</a>
+            <a href='https://newsapi.org'>Powered by News API</a>
           </div>
         </footer>
       </div>

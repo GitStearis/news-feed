@@ -17,17 +17,6 @@ const topics = [
   'Entertainment',
 ];
 
-const data = [
-  {
-    tabName: 'Science',
-    tabPanel: 'Science Tab'
-  },
-  {
-    tabName: 'Technology',
-    tabPanel: 'Technology Tab'
-  }
-];
-
 class NewsModule extends Component {
   constructor(props) {
     super(props);
@@ -55,10 +44,10 @@ class NewsModule extends Component {
 
   setContent(data) {
     let articles = [];
-    data.forEach((datum, index) => {
+    data.forEach((datum) => {
       const articleContent = mapNews(datum);
       articles.push((
-        <Article key={index} content={articleContent}></Article>
+        <Article key={articleContent.href} content={articleContent}></Article>
       ));
     });
     this.setState({
